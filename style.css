@@ -3,3 +3,110 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --red: #ff3860;
+    --red-dark: #ff1443;
+    --red-light: #ff5c7c;
+    --blue: #498afb;
+    --blue-dark: #2674fa;
+    --blue-light: #6ca0fc;
+    --orange: #fa8142;
+    --orange-dark: #f96a1f;
+    --orange-light: #fb9865;
+    --green: #09c372;
+    --green-dark: #07a15e;
+    --green-light: #0be586;
+    --purple: #9166cc;
+    --purple-dark: #7d4bc3;
+    --purple-light: #a481d5;
+    --pink: #ff4088;
+    --pink-dark: #ff1c72;
+    --pink-light: #ff649e;
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray5t: #0000005b;
+    --gray6: #12181b;
+    --gray7: #0b0d0e;
+    --font-body: "sofia-pro",sans-serif;
+    --font-head: 'Poppins', sans-serif;
+    --font-code: "attribute-mono",monospace;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--gray7);
+}
+
+#wrapper{
+    background-color: var(--gray5);
+    width: 20%;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.rowWrapper{
+    display: flex;
+    width: 100%;
+    aspect-ratio: 4/1;
+}
+
+.btn{
+    background-color: var(--gray4);
+
+    flex: 1;
+    border-radius: 9999px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+
+.btn:hover{
+    translate: 0 2px;
+    box-shadow: 0px -2px 3px black inset;
+    cursor: pointer;
+}
+
+p{
+    color: var(--gray0);
+    font-family: var(--font-code);
+    font-weight: 700;
+    font-size: 200%;
+}
+
+.btnGray{
+    background-color: var(--gray3);
+}
+.btnOrange{
+    background-color: var(--orange-dark);
+}
+
+
+#topRow{
+    background-color: var(--gray3);
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 150%;
+}
+
+#topRow p{
+    color: var(--gray7);
+}
+
+#btn0{
+    flex: 2;
+}
