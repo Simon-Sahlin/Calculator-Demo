@@ -28,8 +28,6 @@ let divideButton = document.querySelector("#btnDivide");
 divideButton.addEventListener("click", () => PressOperator("/"))
 
 function PressOperator(index){
-    console.log(operator)
-    console.log(operator === "")
     if (!(operator === "")){
         PressEquals();
     }
@@ -97,7 +95,6 @@ function Divide(num1, num2){
 }
 
 function Operate(){
-    console.log("Operating");
     let result = "error";
     switch (operator){
         case "+":
@@ -118,7 +115,6 @@ function Operate(){
 
 
 addEventListener("keypress", (event) => {
-    console.log(`key=${event.key}`);
     switch (event.key){
         case "1":
             PressNumber(1);
