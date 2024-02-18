@@ -55,7 +55,7 @@ function PressEquals(){
     input2 = +displayValue;
     lastInput = displayValue;
     displayValue = Operate();
-    displayText.textContent = displayValue;
+    displayText.textContent = Math.round(displayValue * 100) / 100 ;
     lastOperator = operator;
     operator = "";
 }

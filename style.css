@@ -102,6 +102,7 @@ p{
     justify-content: flex-end;
     align-items: center;
     font-size: 150%;
+    overflow: hidden;
 }
 
 #topRow p{
