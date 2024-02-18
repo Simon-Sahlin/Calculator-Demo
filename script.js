@@ -7,7 +7,6 @@ let lastInput = "";
 let displayValue = "";
 let hiddenValue = "";
 let displayText = document.querySelector("#displayText")
-displayText.textContent = "abo";
 
 for (let i = 0; i < 10; i++) {
     let numButton = document.querySelector("#btn" + i);
@@ -58,6 +57,22 @@ function PressEquals(){
     lastOperator = operator;
     operator = "";
 }
+
+let clearButton = document.querySelector("#btnAC");
+clearButton.addEventListener("click", () => PressClear());
+
+function PressClear(){
+    input1 = 0;
+    input2 = 0;
+    operator = "";
+    lastOperator = "";
+    lastInput = "";
+
+    displayValue = "";
+    hiddenValue = "";
+    displayText.textContent = "0";
+}
+
 
 function Add(num1, num2){
     return num1 + num2;
