@@ -1,6 +1,8 @@
-let input1 = 15;
-let input2 = 5;
+let input1 = 0;
+let input2 = 0;
 let operator = "";
+let lastOperator = "";
+let lastInput = "";
 
 let displayValue = "";
 let hiddenValue = "";
@@ -27,6 +29,12 @@ let divideButton = document.querySelector("#btnDivide");
 divideButton.addEventListener("click", () => PressOperator("/"))
 
 function PressOperator(index){
+    console.log(operator)
+    console.log(operator === "")
+    if (!(operator === "")){
+        PressEquals();
+    }
+
     operator = index;
     hiddenValue = displayValue;
     displayValue = "";
@@ -36,11 +44,19 @@ let equalsButton = document.querySelector("#btnEquals");
 equalsButton.addEventListener("click", () => PressEquals());
 
 function PressEquals(){
+    if (operator === "" && !(lastOperator === "")){
+        operator = lastOperator;
+        hiddenValue = displayValue;
+        displayValue = lastInput;
+    }
+
     input1 = +hiddenValue;
     input2 = +displayValue;
+    lastInput = displayValue;
     displayValue = Operate();
     displayText.textContent = displayValue;
-
+    lastOperator = operator;
+    operator = "";
 }
 
 function Add(num1, num2){
@@ -62,7 +78,8 @@ function Divide(num1, num2){
 }
 
 function Operate(){
-    result = "error";
+    console.log("Operating");
+    let result = "error";
     switch (operator){
         case "+":
             result = Add(input1, input2);
