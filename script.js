@@ -115,3 +115,56 @@ function Operate(){
     }
     return result
 }
+
+
+addEventListener("keypress", (event) => {
+    console.log(`key=${event.key}`);
+    switch (event.key){
+        case "1":
+            PressNumber(1);
+            break;
+        case "2":
+            PressNumber(2);
+            break;
+        case "3":
+            PressNumber(3);
+            break;
+        case "4":
+            PressNumber(4);
+            break;
+        case "5":
+            PressNumber(5);
+            break;
+        case "6":
+            PressNumber(6);
+            break;
+        case "7":
+            PressNumber(7);
+            break;
+        case "8":
+            PressNumber(8);
+            break;
+        case "9":
+            PressNumber(9);
+            break;
+        case "0":
+            PressNumber(0);
+            break;
+        case "+":
+            PressOperator("+");
+            break;
+        case "-":
+            PressOperator("-");
+            break;
+        case "*":
+            PressOperator("*");
+            break;
+        case "/":
+            PressOperator("/");
+            break;
+        case "=":
+        case "Enter":
+            PressEquals();
+            break; 
+    }
+});
