@@ -43,10 +43,14 @@ let equalsButton = document.querySelector("#btnEquals");
 equalsButton.addEventListener("click", () => PressEquals());
 
 function PressEquals(){
-    if (operator === "" && !(lastOperator === "")){
-        operator = lastOperator;
-        hiddenValue = displayValue;
-        displayValue = lastInput;
+    if (operator === ""){
+        if (!(lastOperator === "")){
+            operator = lastOperator;
+            hiddenValue = displayValue;
+            displayValue = lastInput;
+        }
+        else
+            return;
     }
 
     input1 = +hiddenValue;
